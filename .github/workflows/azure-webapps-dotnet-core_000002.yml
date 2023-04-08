@@ -111,7 +111,7 @@ jobs:
       - name: Login job
         uses: azure/login@v1
         with:
-           creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
+           creds: ${{ secrets.HINA_CREDENTIAL }}
           
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
