@@ -100,7 +100,7 @@ jobs:
     needs: deploy_DEV
     environment:
       name: 'Test'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: https://devopsassignment1.azurewebsites.net/
 
     steps:
       - name: Download artifact from build job
@@ -108,7 +108,7 @@ jobs:
         with:
           name: .net-app
           
-      - name: Deploy to Azure Web App
+      - name: Deploy to https://devopsassignment1.azurewebsites.net/
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
 
